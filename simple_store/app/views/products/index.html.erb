@@ -27,6 +27,9 @@
     <% end %>
   </tbody>
 </table>
+<h1>You have <%= @products.distinct.count('name')   %> products in the database.</h1>
+<h1>The average price of all products is $<%= @products.average(:price) %></h1>
+<h1>You have a total of <%= @products.sum(:stock_quantity) %> items in stock.</h1>
 
 <br>
 
